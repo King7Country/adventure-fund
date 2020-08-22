@@ -24,7 +24,7 @@ const IndexPage = () => {
                   maxHeight: 300,
                   resizingBehavior: SCALE
                 ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
               excerpt {
@@ -47,7 +47,7 @@ const IndexPage = () => {
                   resizingBehavior: SCALE,
                    toFormat: JPG
                 ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
               heroText {
@@ -68,7 +68,7 @@ const IndexPage = () => {
                   resizingBehavior: SCALE,
                    toFormat: JPG
                 ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
               infoText {

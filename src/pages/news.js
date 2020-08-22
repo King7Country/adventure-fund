@@ -22,7 +22,7 @@ const NewsPage = ({ location }) => {
               publishedDate(formatString: "DD MMMM, YYYY")
               featuredImage {
                 fluid(maxWidth: 750, maxHeight: 300, resizingBehavior: SCALE) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
               excerpt {

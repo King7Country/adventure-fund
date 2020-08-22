@@ -25,7 +25,7 @@ const AboutPage = ( {location} ) => {
                   resizingBehavior: SCALE,
                    toFormat: JPG
                 ) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
             }
