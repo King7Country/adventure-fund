@@ -20,7 +20,7 @@ const StyledMenuIcon = styled.div`
     height: .25rem;
     background-color: #FFFFFF;
     transform-origin: 1px;
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
     z-index: ;
 
     &:nth-child(1) {
@@ -47,7 +47,7 @@ const Nav = styled.nav`
   right: 0;
   overflow-y: hidden;
   transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
-  transition: transform 1s ease-in-out;
+  transition: transform .5s ease-in-out;
   color: #FFFFFF;
   background-image: linear-gradient(rgba(0, 0, 0, 1),  rgba(35, 35, 35, 1), rgba(100, 100, 100, 1));
   z-index: 200;

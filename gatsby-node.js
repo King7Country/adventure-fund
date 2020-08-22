@@ -74,14 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            allContentfulHeroBanner {
-              edges {
-                node {
-                  title
-                  slug
-                }
-              }
-            }
           }
           `
       ).then(result => {
@@ -100,17 +92,6 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
-        const pages = result.data.allContentfulHeroBanner.edges
-        pages.forEach((page, index) => {
-          createPage({
-            path: `/${page.node.slug}/`,
-            component: heroPage,
-            context: {
-              slug: page.node.slug
-            },
-          })
-        })
-
       })
     )
   })
