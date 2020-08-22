@@ -1,0 +1,40 @@
+.title {
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 0 1rem;
+  position: relative;
+  color: black;
+
+}
+
+.content {
+
+  padding: 0 1rem;
+  fonts-size: 115%;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  padding-left: 1rem;
+  font-size: 125%;
+  border-left: 1rem solid lightgrey;
+}
+
+.featureList {
+  margin: 2.5rem 0 2.5rem 10%;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  flexwrap: wrap;
+}
+
+.featureList li {
+
+  margin: 0 1.5rem;
+  padding: .5rem .25rem;
+  font-size: 115%;
+  color: ;
+  border-bottom: .25rem solid lightgrey;
+}

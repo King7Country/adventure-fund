@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.head {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  /**
+  position: fixed;
+  transition: 3s cubic-bezier(.2, .8, .2, 1);
+  **/
+}
+
+.scrolled {
+  background-color: aliceblue;
+}
+
+.logo {
+  padding: 1rem 1rem .75rem 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  border: none;
+
+}
+
+Menu {
+
+}
+
+.menu-link {
+  padding: 1rem 2rem;
+  display: inline-block;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+
+}
+
+.menu-link a {
+  color: white;
+}

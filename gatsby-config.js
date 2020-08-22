@@ -1,18 +1,32 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Adventure Investments`,
+    description: `The world's top wealth and and travel investment firm. It's never too late to invest in adventure.`,
+    author: `King Country Web Development`,
+    keywords: `investment, travel, adventure, securities, wealth, skiing, ski, mountain`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    resolve: 'gatsby-source-contentful',
+    options: {
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+
     },
+  },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,5 +44,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
   ],
 }

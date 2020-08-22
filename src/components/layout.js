@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "../components/header.js"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -23,23 +23,20 @@ const Layout = ({ children }) => {
     }
   `)
 
+
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Header />
+
+
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Created and designed by
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.kingcountry.ca">King Country</a>
         </footer>
-      </div>
+
     </>
   )
 }
