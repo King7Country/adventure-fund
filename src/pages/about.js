@@ -4,21 +4,21 @@ import Img from "gatsby-image"
 
 import styles from "./index.module.css"
 import styled from "./about.module.css"
-import Wrapper from "../components/wrapper.js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-const AboutPage = ( {location} ) => {
+const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulHeroBanner {
+        allContentfulHeroBanner(sort: {fields: publishedDate, order: ASC}, limit: 1) {
           edges {
             node {
               title
               id
               slug
+              publishedDate(formatString: "DD MMMM, YYYY")
               heroImage {
                 fluid(
                   maxWidth: 2000,
@@ -27,6 +27,12 @@ const AboutPage = ( {location} ) => {
                 ) {
                   ...GatsbyContentfulFluid
                 }
+              }
+              heroText {
+                heroText
+              }
+              heroPageText {
+                heroPageText
               }
             }
           }
@@ -63,7 +69,10 @@ const AboutPage = ( {location} ) => {
               <h2 className={styled.title}>
                 {edge.node.title}
               </h2>
+
             </div>
+
+
           )
         })}
 

@@ -1,0 +1,17 @@
+
+
+<svg width="210" height="24
+  " xmlns="http://www.w3.org/2000/svg">
+
+  <g>
+    <title>background</title>
+    <rect fill="none" id="canvas_background" height="24" width="250" y="0" x="0"/>
+    <g display="none" overflow="none" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+    </g>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <text xml:space="preserve" text-anchor="start" font-family="Open Sans, Helvetica, Arial, sans-serif" font-size="1rem" id="svg_1" y="20" x="0" stroke-width="0" stroke="#000" fill="#000000">Adventure Fund</text>
+  </g>
+</svg>

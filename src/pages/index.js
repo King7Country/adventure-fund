@@ -2,10 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
+
 import styles from "./index.module.css"
 import Wrapper from "../components/wrapper.js"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Hero from "../components/hero"
+import Info from "../components/info"
+import Testimonials from "../components/testimonials"
 
 
 const IndexPage = () => {
@@ -35,12 +39,13 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulHeroBanner {
+        allContentfulHeroBanner(sort: {fields: publishedDate, order: DESC}, limit: 1) {
           edges {
             node {
               title
               id
               slug
+              publishedDate(formatString: "DD MMMM, YYYY")
               heroImage {
                 fluid(
                   maxWidth: 2000,
@@ -56,11 +61,12 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulHomePageInfo {
+        allContentfulHomePageInfo(sort: {fields: publishedDate, order: DESC}, limit: 3) {
           edges {
             node {
               title
               id
+              publishedDate(formatString: "DD MMMM, YYYY")
               photo {
                 fluid(
                   maxWidth: 500,
@@ -74,12 +80,15 @@ const IndexPage = () => {
               infoText {
                 infoText
               }
+              linkTo
+              linkText
             }
           }
         }
-        allContentfulTestimonial(limit: 2) {
+        allContentfulTestimonial(sort: {fields: publishedDate, order: DESC}, limit: 2) {
           edges {
             node {
+              publishedDate(formatString: "DD MMMM, YYYY")
               testimonial {
                 testimonial
               }
@@ -96,67 +105,40 @@ const IndexPage = () => {
       <SEO title="Home" />
 
       {/*******
-        Herosection
+        Hero section
       *******/}
 
-      {data.allContentfulHeroBanner.edges.map(edge => {
+      <Hero data={data} />
+
+      {/* {data.allContentfulHeroBanner.edges.map(edge => {
         return (
           <div className={styles.heroWrapper}
-            key={edge.node.id}>
+        key={edge.node.id}>
 
-            {edge.node.heroImage && (
-              <Img
-                className={styles.heroImage}
-                fluid={edge.node.heroImage.fluid}
-                alt={edge.node.title}
-              />
-            )}
-            <div className={styles.heroMessage}>
+        {edge.node.heroImage && (
+        <Img
+        className={styles.heroImage}
+        fluid={edge.node.heroImage.fluid}
+        alt={edge.node.title}
+        />
+        )}
+        <div className={styles.heroMessage}>
 
-              <h2 className={styles.heroText}>
-                {edge.node.heroText.heroText}
-              </h2>
-              <Link className={styles.heroLink} to="/about/">Learn More</Link>
-            </div>
+        <h2 className={styles.heroText}>
+        {edge.node.heroText.heroText}
+        </h2>
+        <Link className={styles.heroLink} to="/about/">Learn More</Link>
+        </div>
           </div>
         )
-      })}
+        })}
+      */}
 
       {/*******
         Info section with colored background
       *******/}
 
-      <div className={styles.background}>
-
-        {data.allContentfulHomePageInfo.edges.map(edge => {
-          return (
-
-            <div className={styles.info}
-              key={edge.node.id}>
-
-              {edge.node.photo && (
-
-                <Img
-                  className={styles.photo}
-                  fluid={edge.node.photo.fluid}
-                  alt={edge.node.title}
-                />
-              )}
-              <div className={styles.infoChunk}>
-
-                <h2 className={styles.infoTitle}>
-                  {edge.node.title}
-                </h2>
-                <p className={styles.infoText}>
-                  {edge.node.infoText.infoText}
-                </p>
-
-              </div>
-            </div>
-          )
-        })}
-
-      </div>
+      <Info data={data} />
 
       {/*******
         News list section
@@ -205,30 +187,11 @@ const IndexPage = () => {
         Testimonial section with colored background
       *******/}
 
-      <div className={styles.background}>
-        <ul className={styles.testimonialWrapper}>
-
-          {data.allContentfulTestimonial.edges.map(edge => {
-            return (
-
-              <li className={styles.testimonialChunk}
-                key={edge.node.id}>
-                <h2 className={styles.testimonial}>
-                  {edge.node.testimonial.testimonial}
-                </h2>
-                <p className={styles.clientName}>
-                  {edge.node.clientName}
-                </p>
-              </li>
+      <Testimonials data={data} />
 
 
-            )
-          })}
-
-        </ul>
-      </div>
     </Layout>
-          )
-          }
+  )
+}
 
           export default IndexPage

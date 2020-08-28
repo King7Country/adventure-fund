@@ -3,10 +3,16 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { useDarkBackground } from "../hooks"
 
+import styled from "@emotion/styled"
 import styles from "./index.module.css"
-import Wrapper from "../components/wrapper.js"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const Wrapper = styled.div `
+  margin-top:    5rem;
+  margin-bottom: 4rem;
+`
 
 const NewsPage = ({ location }) => {
 
@@ -45,7 +51,8 @@ const NewsPage = ({ location }) => {
       <SEO title="News" />
       <Wrapper>
         <h1 style={{
-          marginLeft: `5%`
+          marginLeft: `5%`,
+          paddingTop: `2.5rem`
         }}>News</h1>
 
         <ul className={styles.postList}>

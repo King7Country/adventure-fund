@@ -60,8 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    const heroPage = path.resolve('./src/templates/hero-post.js')
+    const newsArticle = path.resolve('./src/templates/news-article.js')
     resolve(
       graphql(
         `
@@ -82,13 +81,13 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const posts = result.data.allContentfulBlogPost.edges
-        posts.forEach((post, index) => {
+        const articles = result.data.allContentfulBlogPost.edges
+        articles.forEach((article, index) => {
           createPage({
-            path: `/news/${post.node.slug}/`,
-            component: blogPost,
+            path: `/news/${article.node.slug}/`,
+            component: newsArticle,
             context: {
-              slug: post.node.slug
+              slug: article.node.slug
             },
           })
         })

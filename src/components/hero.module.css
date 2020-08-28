@@ -1,0 +1,49 @@
+.heroImage {
+  height: 75vh;
+}
+
+.heroMessage {
+  position: absolute;
+  top: 0;
+  height: 75vh;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(0, 0, 0, .4));
+}
+
+.heroTitle {
+  margin: 0;
+  padding: 0 1rem;
+  position: relative;
+  top: 40vh;
+}
+
+.heroText {
+  padding: 0 1rem;
+  position: relative;
+  top: 40vh;
+  max-width: 80%;
+  font-weight: bolder;
+}
+
+.heroLink {
+    padding: .5rem .5rem .25rem .5rem;
+    position: relative;
+    top: 40vh;
+    left: 1rem;
+    min-width: 8rem;
+    font-size: .85rem;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .heroText {
+    margin-left: 5%;
+  }
+  .heroLink {
+    margin-left: 5%;
+  }
+
+}

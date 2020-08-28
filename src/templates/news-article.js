@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-import styles from "./blog-post.module.css"
+import styles from "./news-article.module.css"
 
 export const query = graphql`
   query($slug: String!) {
@@ -24,7 +24,7 @@ export const query = graphql`
   }
 `
 
-const BlogPost = props => {
+const NewsArticle = props => {
 
   const options = {
     renderNode: {
@@ -40,14 +40,19 @@ const BlogPost = props => {
     <Layout>
       <SEO title={props.data.contentfulBlogPost.title} />
 
-      {props.data.contentfulBlogPost.featuredImage && (
-        <Img
 
+      {props.data.contentfulBlogPost.featuredImage && (
+
+        <Img
           className={styles.featured}
           fluid={props.data.contentfulBlogPost.featuredImage.fluid}
           alt={props.data.contentfulBlogPost.title}
         />
+
       )}
+      <div className={styles.featuredWrapper}>
+      </div>
+
       <div className={styles.content}>
         <h2>{props.data.contentfulBlogPost.title}</h2>
         <span className={styles.meta}>
@@ -60,10 +65,10 @@ const BlogPost = props => {
         {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
 
 
-        <Link className={styles.return} to="/">Return Home</Link>
+        <Link className={styles.return} to="/news/">Return to News</Link>
       </div>
     </Layout>
   )
 }
 
-export default BlogPost
+export default NewsArticle

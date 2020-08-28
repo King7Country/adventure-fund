@@ -1,31 +1,64 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import styles from '../components/hero.module.css'
 
-export default ({ heroData }) => (
+const Hero = ( {data} ) => (
 
-  {HeroData(edge => {
-    return (
-      <div className={styles.heroWrapper}
-        key={edge.node.id}>
+  <section>
 
-        {edge.node.heroImage && (
-          <Img
-            className={styles.heroImage}
-            fluid={edge.node.heroImage.fluid}
-            alt={edge.node.title}
-          />
-        )}
-        <div className={styles.heroMessage}>
+    {data.allContentfulHeroBanner.edges.map(edge => {
 
-          <h2 className={styles.heroText}>
-            {edge.node.heroText.heroText}
-          </h2>
-          <Link className={styles.heroLink} to="/about/">Learn More</Link>
+      return (
+
+        <div className={styles.heroWrapper}
+          key={edge.node.id}>
+
+          {edge.node.heroImage && (
+            <Img
+              className={styles.heroImage}
+              fluid={edge.node.heroImage.fluid}
+              alt={edge.node.title}
+            />
+          )}
+          <div className={styles.heroMessage}>
+
+            <h2 className={styles.heroText}>
+              {edge.node.heroText.heroText}
+            </h2>
+            <Link className={styles.heroLink} to="/about/">Learn More</Link>
+          </div>
         </div>
-      </div>
-    )
-  })}
 
+      )
+    })}
+  </section>
 )
+
+export default Hero
+
+
+
+      // {data.allContentfulHeroBanner.edges.map(edge => {
+      //   return (
+      //     <div className={styles.heroWrapper}
+      //       key={edge.node.id}>
+      //
+      //       {edge.node.heroImage && (
+      //         <Img
+      //           className={styles.heroImage}
+      //           fluid={edge.node.heroImage.fluid}
+      //           alt={edge.node.title}
+      //         />
+      //       )}
+      //       <div className={styles.heroMessage}>
+      //
+      //         <h2 className={styles.heroText}>
+      //           {edge.node.heroText.heroText}
+      //         </h2>
+      //         <Link className={styles.heroLink} to="/about/">Learn More</Link>
+      //       </div>
+      //     </div>
+      //   )
+      // })}

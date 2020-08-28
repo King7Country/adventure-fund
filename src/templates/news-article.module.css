@@ -1,7 +1,18 @@
 .featured {
   max-height: 500px;
   margin: 0rem 0 2.5rem 0;
+
+
   }
+
+.featuredWrapper {
+  position: absolute;
+  top: 0;
+  height: 500px;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
 
 .content {
   padding: 0 1rem;
@@ -22,5 +33,7 @@
 }
 
 .return {
+  margin: 2.5rem 0;
+  display: block;
   color: rgb(0, 0, 0, .5);
 }

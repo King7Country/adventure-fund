@@ -21,27 +21,27 @@
 }
 
 .logo {
-  padding: 1rem 1rem .75rem 1rem;
+  padding: 1rem 0 .5rem 1rem;
   position: relative;
   top: 0;
   left: 0;
+  width: auto;
+  height: 100%;
   display: block;
   border: none;
-
 }
+  .logo text {
+    font-size: 125%;
+    font-weight: bold;
+    fill: #FFFFFF;
+  }
 
-Menu {
 
-}
 
-.menu-link {
-  padding: 1rem 2rem;
-  display: inline-block;
-  font-size: 1.15rem;
-  color: #FFFFFF;
 
-}
+@media only screen and (min-width: 650px) {
 
-.menu-link a {
-  color: white;
+  .logo {
+    padding: 1.25rem 0 .5rem 5%;
+  }
 }

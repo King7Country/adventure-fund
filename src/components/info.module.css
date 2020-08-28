@@ -1,0 +1,40 @@
+.info {
+  margin: 0 auto;
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2.5rem;
+  justify-content: center;
+
+}
+
+.info:last-child {
+  padding-top: 5rem;
+  direction: rtl;
+  text-align: left;
+}
+
+.photo {
+  max-width: 750px;
+  position: relative;
+  display: block;
+
+}
+
+.infoChunk {
+
+  align-self: center;
+}
+
+.infoTitle {
+  font-size: 250%;
+  padding-bottom: 1rem;
+}
+
+.infoLink {
+    padding: 0 .5rem;
+    display: inline-block;
+    font-size: 90%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}

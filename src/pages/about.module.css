@@ -1,6 +1,20 @@
+.featured {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0rem 0 2.5rem 0;
+  }
+
+.featuredWrapper {
+  max-height: 500px;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+
+}
+
 .title {
-  margin: 2.5rem 0 1.5rem 0;
-  padding: 0 1rem;
+  margin-left: 5%;
+  padding: 2.5rem 0 0 1rem;
   position: relative;
   color: black;
 
@@ -23,18 +37,106 @@ blockquote {
 }
 
 .featureList {
-  margin: 2.5rem 0 2.5rem 10%;
-  padding: 0;
+  margin: 2.5rem auto 2.5rem 5%;
+  padding-bottom: 5rem;
+  max-width: 100%;
   display: flex;
   flex-flow: row wrap;
   flexwrap: wrap;
+  list-style: none;
 }
 
 .featureList li {
-
-  margin: 0 1.5rem;
+  margin: 0 1.5rem 1rem 1.5rem;
   padding: .5rem .25rem;
-  font-size: 115%;
   color: ;
   border-bottom: .25rem solid lightgrey;
+}
+
+.ctaWrapper {
+  margin-top: 5rem;
+}
+
+.photoCta {
+  margin: 0 10%;
+  max-width: 100%;
+  display: block;
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+}
+
+.ctaChunk {
+  padding: 0 5%;
+  position: relative;
+  top: -100px;
+  left: 10%;
+  display: block;
+}
+.ctaChunk h2 {
+  font-size: ;
+  color: white;
+  font-size: 100%;
+}
+
+.link {
+    padding: 0 .5rem;
+    display: inline-block;
+    font-size: 90%;
+    text-align: center;
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+@media only screen and (min-width: 400px) {
+  .ctaChunk h2 {
+    font-size: 125%;
+  }
+
+  .link {
+      font-size: 105%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+
+  .featureList {
+    margin: 2.5rem auto 2.5rem 10%;
+  }
+
+  .ctaChunk {
+    top: -200px;
+  }
+
+  .ctaChunk h2 {
+    font-size: 175%;
+  }
+
+  .link {
+      font-size: 125%;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+
+  .featureList {
+    margin: 2.5rem auto 2.5rem 25%;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+  .featureList {
+    margin: 2.5rem auto 2.5rem 25%;
+  }
+
+  .photoCta {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .ctaChunk {
+    top: -250px;
+    left: 22.5%;
+  }
+
 }

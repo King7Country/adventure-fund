@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import './header.css'
 import Menu from "./menu.js"
+import Logo from "../images/logo.svg"
 
 class Header extends React.Component {
 
@@ -41,7 +42,9 @@ class Header extends React.Component {
         <header id="header" className="head">
 
           <Link className="logo" to="/">
-            <img src={require('../images/king-country-logo-white.svg')} alt="Logo" width="200"/>
+
+            <Logo />
+
           </Link>
 
           <Menu />
