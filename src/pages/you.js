@@ -41,7 +41,7 @@ const YouPage = ( ) => {
   return (
     <>
       <Layout>
-        <SEO title="The Funds" />
+        <SEO title="You" />
 
 
         {data.allContentfulServicesPage.edges.map(edge => {
@@ -105,7 +105,7 @@ const YouPage = ( ) => {
                   <Link className={styled.link} to="/">Adventure With Us</Link>
                 </div>
 
-                
+
               </div>
 
               </div>

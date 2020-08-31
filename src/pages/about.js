@@ -34,7 +34,7 @@ const AboutPage = () => {
   return (
     <>
       <Layout>
-        <SEO title="The Funds" />
+        <SEO title="Us" />
 
 
         {data.allContentfulServicesPage.edges.map(edge => {
@@ -82,7 +82,7 @@ const AboutPage = () => {
               </div>
 
 
-              
+
 
               </div>
 

@@ -50,10 +50,10 @@ const NewsPage = ({ location }) => {
     <Layout>
       <SEO title="News" />
       <Wrapper>
-        <h1 style={{
+        <h2 style={{
           marginLeft: `5%`,
           paddingTop: `2.5rem`
-        }}>News</h1>
+        }}>News</h2>
 
         <ul className={styles.postList}>
           {data.allContentfulBlogPost.edges.map(edge => {

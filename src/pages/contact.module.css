@@ -1,0 +1,52 @@
+.contactWrapper {
+  margin-top: 8.5rem;
+  margin-bottom: 4.5rem;
+  display: grid;
+
+  grid-gap: 10%;
+}
+
+.title {
+  padding-right: 1rem;
+  margin-left: 5%;
+}
+
+.contactPhoto {
+  width: 100%;
+  height: 50vh;
+}
+
+.contactList {
+  margin: 0;
+  padding: 0 1rem 0 5%;
+  list-style: none;
+}
+
+.contactList h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.contactList a {
+  margin: 0;
+  padding: .5rem 0;
+  display: block;
+}
+
+.contactList li {
+margin-bottom: .5rem;
+
+}
+
+@media only screen and (min-width: 500px) {
+
+  .contactWrapper {
+    grid-template-columns: 2fr 1fr;
+
+  }
+
+  .contactList li{
+    padding-right: 1rem;
+    list-style: none;
+  }
+}
