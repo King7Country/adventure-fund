@@ -40,9 +40,13 @@ const DesktopMenu = () => {
 
       <Nav>
 
+        <Link className="link" to="/you/">You</Link>
+
+        <Link className="link" to="/about/">& Us</Link>
+
         <Link className="link" to="/news/">News</Link>
 
-        <Link className="link" to="/about/">About</Link>
+        <Link className="link" to="/contact/">Contact</Link>
 
       </Nav>
 

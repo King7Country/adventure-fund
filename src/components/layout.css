@@ -232,6 +232,7 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
+
   font-size: 1.62671rem;
   line-height: 1.1;
 }
@@ -482,6 +483,18 @@ footer a {
   body {
     font: 125% 'Open Sans', sans-serif;
 
+  }
+
+  h1 {
+
+  }
+
+  h2 {
+    font-size: 200%;
+  }
+
+  h3 {
+    font-size: 150%;
   }
 
   .background {

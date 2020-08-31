@@ -8,11 +8,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-const FundsPage = ( ) => {
+const YouPage = ( ) => {
   const data = useStaticQuery(
     graphql`
       query {
-        allContentfulServicesPage(limit: 1) {
+        allContentfulServicesPage(filter: {pageName: {eq: "You"}}) {
           edges {
             node {
               title
@@ -82,13 +82,15 @@ const FundsPage = ( ) => {
               </ul>
 
               <div className="background">
-                <p className={styles}>
+                <p className={styled.content}>
                   I'm baby meditation pinterest intelligentsia gochujang gluten-free
                   cred sustainable etsy seitan sriracha.  Woke brooklyn gluten-free banh
                 mi. Biodiesel wolf selfies, iceland fashion axe. Next level craft beer shaman.</p>
               </div>
 
+
               <div className={styled.ctaWrapper}>
+
                 {edge.node.photoCta && (
 
                   <Img
@@ -103,17 +105,18 @@ const FundsPage = ( ) => {
                   <Link className={styled.link} to="/">Adventure With Us</Link>
                 </div>
 
+                
               </div>
-              
-            </div>
+
+              </div>
 
 
-          )
-        })}
+              )
+              })}
 
-      </Layout>
+            </Layout>
     </>
   )
 }
 
-export default FundsPage
+export default YouPage

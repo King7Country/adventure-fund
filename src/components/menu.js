@@ -18,11 +18,18 @@ const Menu = () => {
   //   return () => window.removeEventListener("resize", handleWindowResize);
   // }, []);
 
+
+
+
   const { width } = useViewport();
+
   const breakpoint = 800;
 
-  return width < breakpoint ? <MobileMenu /> : <DesktopMenu />;
-
+  if (typeof window !== 'undefined') {
+    return (
+       width < breakpoint ? <MobileMenu /> : <DesktopMenu />
+    );
+  }
 }
 
 export default Menu

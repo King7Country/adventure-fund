@@ -1,6 +1,6 @@
 .featured {
   max-width: 100%;
-  max-height: 500px;
+  height: 50vh;
   margin: 0rem 0 2.5rem 0;
   }
 
@@ -8,26 +8,25 @@
   max-height: 500px;
   width: 100%;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
-
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4));
 }
 
 .title {
   margin-left: 5%;
-  padding: 2.5rem 0 0 1rem;
+  padding: 2.5rem 1rem 0 1rem;
   position: relative;
   color: black;
-
 }
 
 .content {
 
   padding: 0 1rem;
-  fonts-size: 115%;
+
 }
 
 .content p {
   margin-bottom: 1rem;
+  max-width: 90ch;
 }
 
 blockquote {
@@ -38,42 +37,48 @@ blockquote {
 
 .featureList {
   margin: 2.5rem auto 2.5rem 5%;
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
   max-width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  flexwrap: wrap;
-  list-style: none;
+  list-style: square;
 }
 
 .featureList li {
   margin: 0 1.5rem 1rem 1.5rem;
   padding: .5rem .25rem;
-  color: ;
+  max-width: 35rem;
   border-bottom: .25rem solid lightgrey;
 }
 
 .ctaWrapper {
   margin-top: 5rem;
+  padding: 0;
+  max-height: 100%;
+  display: grid;
 }
 
 .photoCta {
   margin: 0 10%;
+  padding: 0;
   max-width: 100%;
+  max-height: 500px;
   display: block;
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
 }
+
+
+
 
 .ctaChunk {
   padding: 0 5%;
+  max-width: 90%;
   position: relative;
-  top: -100px;
+  top: -275%;
   left: 10%;
-  display: block;
+  display: inline;
 }
+
 .ctaChunk h2 {
   font-size: ;
-  color: white;
+  color: #FFFFFF;
   font-size: 100%;
 }
 
@@ -87,6 +92,11 @@ blockquote {
 }
 
 @media only screen and (min-width: 400px) {
+
+  .ctaChunk {
+    top: -350%;
+  }
+
   .ctaChunk h2 {
     font-size: 125%;
   }
@@ -100,11 +110,10 @@ blockquote {
 
   .featureList {
     margin: 2.5rem auto 2.5rem 10%;
+
   }
 
-  .ctaChunk {
-    top: -200px;
-  }
+
 
   .ctaChunk h2 {
     font-size: 175%;
@@ -118,7 +127,7 @@ blockquote {
 @media only screen and (min-width: 850px) {
 
   .featureList {
-    margin: 2.5rem auto 2.5rem 25%;
+    margin: 2.5rem auto 2.5rem 15%;
   }
 
 }
@@ -126,17 +135,20 @@ blockquote {
 @media only screen and (min-width: 1100px) {
 
   .featureList {
-    margin: 2.5rem auto 2.5rem 25%;
+    margin: 2.5rem auto 2.5rem 30%;
   }
 
+
+
   .photoCta {
-    margin: 0 auto;
-    max-width: 900px;
+    margin: 0 20%;
+    max-width: 60%;
+    max-height: 600px;
   }
 
   .ctaChunk {
-    top: -250px;
-    left: 22.5%;
+    left: 20%;
   }
+
 
 }

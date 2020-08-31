@@ -137,9 +137,13 @@ const MobileMenu = () => {
         </StyledExitIcon>
         <ul>
 
+          <li><a onClick={() => setOpen(!open)} id="blog" href="/you/">You</a></li>
+
+          <li><a onClick={() => setOpen(!open)} id="blog" href="/about/">& Us</a></li>
+
           <li><a onClick={() => setOpen(!open)} id="blog" href="/news/">News</a></li>
 
-          <li><a onClick={() => setOpen(!open)} id="blog" href="/about/">About</a></li>
+          <li><a onClick={() => setOpen(!open)} id="blog" href="/contact/">Contact</a></li>
 
         </ul>
       </Nav>

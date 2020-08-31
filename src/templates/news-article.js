@@ -50,23 +50,25 @@ const NewsArticle = props => {
         />
 
       )}
-      <div className={styles.featuredWrapper}>
+      <div className={styles.overlay}>
       </div>
 
-      <div className={styles.content}>
-        <h2>{props.data.contentfulBlogPost.title}</h2>
+      <div className={styles.title}>
+        <h2 >{props.data.contentfulBlogPost.title}</h2>
+
         <span className={styles.meta}>
           Posted on {props.data.contentfulBlogPost.publishedDate}
         </span>
+      </div>
 
-
-
+      <div className={styles.content}>
 
         {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
 
-
-        <Link className={styles.return} to="/news/">Return to News</Link>
       </div>
+
+      <Link className={styles.return} to="/news/">Return to News</Link>
+      
     </Layout>
   )
 }
