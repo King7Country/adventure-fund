@@ -6,10 +6,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Adventure Investments`,
+    title: `Adventure Fund`,
     description: `The world's top wealth and travel investment firm. It's never too late to invest in adventure.`,
     author: `King Country Web Development`,
-    keywords: `investment, travel, adventure, securities, wealth, skiing, ski, mountain`,
+    keywords: `web development, web design, freelance, web developer, template, react, gatsby, contentful`,
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -31,18 +31,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+    `gatsby-plugin-lodash`,
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -65,7 +54,18 @@ module.exports = {
         // Add any options here
       },
     },
-
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Adventure Fund`,
+        short_name: `AF`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#baccdd`,
+        display: `standalone`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

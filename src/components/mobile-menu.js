@@ -14,6 +14,10 @@ const StyledMenuIcon = styled.div`
     cursor: pointer;
   }
 
+  /* @media (min-width: 800px) {
+    display: none;
+  } */
+
   div {
     margin: 0;
     width: 2rem;
@@ -49,7 +53,8 @@ const Nav = styled.nav`
   transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform .5s ease-in-out;
   color: #FFFFFF;
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(186, 204, 221, 1));
+  background-color: #baccdd;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(186, 204, 221, 1)); */
   z-index: 1;
 
   ul {
@@ -65,10 +70,11 @@ const Nav = styled.nav`
   a {
 
     margin: 0 auto;
-    padding: 2rem 5rem;
+    padding: 1.5rem 5rem;
     min-width: 7.5rem;
     display: block;
-    font-size: 1.25rem;
+    font-size: 125%;
+    font-weight: bold;
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
@@ -82,13 +88,13 @@ const StyledExitIcon = styled.div`
   padding: 1rem;
   width: 2rem;
   position: absolute;
-  top: .5rem;
+  top: 0rem;
   right: 2rem;
-  z-index: ;
 
   &:hover {
     cursor: pointer;
   }
+
 
 
   div {
@@ -113,6 +119,9 @@ const StyledExitIcon = styled.div`
     &:nth-child(3) {
       transform: ${({ open }) => open ? 'rotate(-32.5deg)' : 'rotate(0)'};
     }
+
+
+
 }
 `
 

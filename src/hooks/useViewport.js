@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import throttle from 'lodash.throttle'
 
 const useViewport = () => {
 
@@ -10,13 +10,15 @@ const useViewport = () => {
   useEffect(() => {
     if (!isBrowser) return false
 
-    const handleResize = () => setWidth(window.innerWidth)
+    const handleResize = throttle(function() { setWidth(window.innerWidth)
+    }, 200);
+
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  })
+  }, [])
 
   return { width }
 }

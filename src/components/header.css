@@ -29,6 +29,7 @@
   height: 100%;
   display: block;
   border: none;
+  z-index: 2;
 }
   .logo text {
     font-size: 125%;
