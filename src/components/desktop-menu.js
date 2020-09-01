@@ -17,7 +17,11 @@ const Nav = styled.nav`
   overflow: hidden;
   color: #FFFFFF;
   z-index: 1;
+  display: none;
 
+  @media only screen and (min-width: 800px) {
+      display: flex;
+  }
 
     a {
       margin: .5rem .25rem;
@@ -51,7 +55,7 @@ const DesktopMenu = () => {
       </Nav>
 
     </>
-);
+  );
 }
 
 export default DesktopMenu;

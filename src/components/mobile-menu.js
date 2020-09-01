@@ -14,9 +14,9 @@ const StyledMenuIcon = styled.div`
     cursor: pointer;
   }
 
-  /* @media (min-width: 800px) {
-    display: none;
-  } */
+  @media only screen and (min-width: 800px) {
+      display: none;
+  }
 
   div {
     margin: 0;
