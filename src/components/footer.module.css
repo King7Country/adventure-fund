@@ -1,0 +1,53 @@
+footer {
+  padding: 2.5rem 5%;
+
+  display: grid;
+
+  color: #FFF;
+  background-color: #baccdd;
+}
+
+footer a {
+
+  color: #FFFFFF;
+}
+
+.copyright {
+  margin-left: 0%;
+  align-self: center;
+}
+
+.footerList {
+  margin: 2.5rem 0 0 0;
+
+  align-self: center;
+  list-style: none;
+
+}
+
+.footerList li {
+
+  padding: .25rem;
+
+  display: block;
+}
+
+.footerList li a {
+
+  padding: .25rem;
+  display: block;
+}
+
+@media only screen and (min-width: 650px) {
+
+  footer {
+
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 50%;
+  }
+
+  .footerList {
+    margin: 0;
+
+  }
+}

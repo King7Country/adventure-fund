@@ -108,13 +108,13 @@ const YouPage = ( ) => {
 
               </div>
 
-              </div>
+            </div>
 
 
-              )
-              })}
+          )
+        })}
 
-            </Layout>
+      </Layout>
     </>
   )
 }

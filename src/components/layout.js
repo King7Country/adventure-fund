@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../components/header.js"
+import Header from "../components/header"
+import Footer from "../components/footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -31,11 +32,9 @@ const Layout = ({ children }) => {
 
 
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Created and designed by
-          {` `}
-          <a href="https://www.kingcountry.ca">King Country</a>
-        </footer>
+
+        <Footer />
+
 
     </>
   )
