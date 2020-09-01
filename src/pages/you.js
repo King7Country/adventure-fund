@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import styles from "./index.module.css"
 import styled from "./about.module.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"

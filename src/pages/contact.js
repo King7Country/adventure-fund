@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { useDarkBackground } from "../hooks"
 
 import styles from "./contact.module.css"
-import Wrapper from "../components/wrapper"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -51,7 +50,7 @@ const ContactPage = ( ) => {
 
 
               <SEO title="Contact" />
-              
+
 
               <div className={styles.contactWrapper}>
 
