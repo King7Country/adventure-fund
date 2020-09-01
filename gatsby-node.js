@@ -36,7 +36,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-
 // const path = require('path')
 //
 // exports.createPages = ({ graphql, actions }) => {
