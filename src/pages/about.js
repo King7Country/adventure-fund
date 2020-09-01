@@ -50,7 +50,7 @@ const AboutPage = () => {
                   alt={edge.node.title}
                 />
               )}
-              <div className={styled.featuredWrapper}>
+              <div className={styled.overlay}>
               </div>
 
               <h2 className={styled.title}>

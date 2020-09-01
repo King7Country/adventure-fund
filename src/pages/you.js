@@ -101,7 +101,7 @@ const YouPage = ( ) => {
 
                 <div className={styled.ctaChunk}>
                   <h2>Readymade, readymade.</h2>
-                  <Link className={styled.link} to="/">Adventure With Us</Link>
+                  <Link className={styled.link} to="/contact">Adventure With Us</Link>
                 </div>
 
 

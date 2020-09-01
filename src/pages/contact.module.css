@@ -1,5 +1,5 @@
 .contactWrapper {
-  margin-top: 8.5rem;
+  margin-top: 7.5rem;
   margin-bottom: 4.5rem;
   display: grid;
   grid-gap: 10%;
@@ -32,13 +32,20 @@
   display: block;
 }
 
+.contactList li p {
+  margin: 0;
+  padding: .5rem 0;
+  display: block;
+}
+
 .contactList li {
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 650px) {
 
   .contactWrapper {
+    margin-top: 8.5rem;
     grid-template-columns: 2fr 1fr;
 
   }
