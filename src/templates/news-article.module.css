@@ -15,7 +15,7 @@
 }
 
 .title {
-  margin-left: 5%;
+  margin-left: 1rem;
   display: block;
 }
 
@@ -40,7 +40,45 @@
 }
 
 .return {
-  margin: 2.5rem 0 2.5rem 5%;
+  margin: 2.5rem 0 2.5rem 1rem;
   display: block;
   color: rgb(0, 0, 0, .5);
+}
+
+@media only screen and (min-width: 650px) {
+
+  .heroTitle {
+    top: 40vh;
+
+  }
+
+  .heroText {
+    top: 40vh;
+    max-width: 50%;
+  }
+
+  .button {
+    margin-left: 7.5%;
+  }
+
+  .infoText {
+    font-size: 125%;
+  }
+
+  .title {
+    font-size: 135%;
+  }
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+  .title {
+    margin-left: 5%;
+  }
+
+  .return {
+    margin: 2.5rem 0 2.5rem 5%;
+  }
+
 }
