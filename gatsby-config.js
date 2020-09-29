@@ -73,10 +73,16 @@ module.exports = {
         icon: `src/images/kingcountry-icon.png`, // This path is relative to the root of the site.
       },
     },
-
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require("./src/utils/algolia-queries")
+      },
+    }
   ],
 }
