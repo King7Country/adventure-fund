@@ -62,11 +62,11 @@ const ContactPage = ( ) => {
                 <ul className={styles.contactList}>
                   <li>
                     <h3>Email:</h3>
-                    <a href="mailto: cj@kingcountry.ca">adventure@fund.com</a>
+                    <a href="mailto: cj@kingcountry.ca">cj@kingcountry.ca</a>
                   </li>
                   <li>
                     <h3>Phone:</h3>
-                    <p>604-123-9876</p>
+                    <p>778-772-4700</p>
                   </li>
 
 
